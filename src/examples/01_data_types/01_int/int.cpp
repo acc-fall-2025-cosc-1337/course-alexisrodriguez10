@@ -23,3 +23,11 @@ Function add_numbers returns the sum of two integers
 int add_numbers(int num1, int num2) {
     return num1 + num2;
 }
+
+double add_to_double_1(double num1, double num2) {
+    return num1 + num2;
+}
+
+double gross_pay(int hours, double pay_rate) {
+    return hours * pay_rate;
+}
