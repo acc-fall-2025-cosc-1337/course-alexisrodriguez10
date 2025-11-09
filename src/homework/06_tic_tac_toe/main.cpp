@@ -14,9 +14,17 @@ int main()
 
     while (choice == 'y' || choice == 'Y')
     {
-        
+        do
+        {
         cout << "Enter first player (X or O): ";
         cin >> first_player;
+
+        if (first_player != "X" && first_player != "O")
+        {
+            cout << "Invalid input! Please enter 'X' or 'O'.\n";
+        }
+
+        } while (first_player != "X" && first_player != "O");
 
         
         game.start_game(first_player);
@@ -41,15 +49,25 @@ int main()
             game.mark_board(position);
         }
 
-        
-        cout << "\nGame Over!\n";
+        cout << "\nFinal Board:\n";
         game.display_board();
-        cout << "It's a tie! (No winner )\n";
 
-        // 5) Clear the board for a new game
-        cout << "Do you want to play again? (Y/N): ";
+        string winner = game.get_winner();
+
+        if (winner == "C")
+        {
+            cout << "It's a tie! (Cat’s Game)\n";
+        }
+        else
+        {
+            cout << "🎉 Player " << winner << " wins! 🎉\n";
+        }
+
+
+        cout << "Would you like to play another game? (Y/N): ";
         cin >> choice;
         cout << "\n";
+        
     }
 
     return 0;
