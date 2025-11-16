@@ -1,4 +1,7 @@
 //h
+#ifndef TIC_TAC_TOE_3_H
+#define TIC_TAC_TOE_3_H
+
 #include <string>
 #include <vector>
 
@@ -44,3 +47,5 @@ private:
     
 
 };
+
+#endif 
