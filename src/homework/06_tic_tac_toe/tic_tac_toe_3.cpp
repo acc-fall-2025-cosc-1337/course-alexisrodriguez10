@@ -16,7 +16,7 @@ void TicTacToe::start_game(string first_player)
     }
 
     {
-        /* code */
+
     }
     
 }
